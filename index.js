@@ -3,11 +3,7 @@
 'use strict';
 
 var Parser = require('jsonparse');
-
-/*
-
-
-*/
+var through, check;
 
 exports.parse = function(path, map) {
 
@@ -136,7 +132,7 @@ exports.parse = function(path, map) {
   return stream;
 };
 
-function check(x, y) {
+/*function check(x, y) {
   if ('string' === typeof x) {
     return y == x;
   } else if (x && 'function' === typeof x.exec) {
@@ -147,7 +143,7 @@ function check(x, y) {
     return x(y);
   }
   return false;
-}
+}*/
 
 exports.stringify = function(op, sep, cl, indent) {
   indent = indent || 0;
