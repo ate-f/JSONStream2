@@ -132,9 +132,9 @@ exports.parse = function(path, map) {
   return stream;
 };
 
-/*function check(x, y) {
+check = function(x, y) {
   if ('string' === typeof x) {
-    return y == x;
+    return y === x;
   } else if (x && 'function' === typeof x.exec) {
     return x.exec(y);
   } else if ('boolean' === typeof x) {
@@ -143,7 +143,7 @@ exports.parse = function(path, map) {
     return x(y);
   }
   return false;
-}*/
+};
 
 exports.stringify = function(op, sep, cl, indent) {
   indent = indent || 0;
