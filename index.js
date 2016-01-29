@@ -3,6 +3,9 @@
 'use strict';
 
 var Parser = require('jsonparse');
+var Transform = require('stream').Transform;
+var JsonParser;
+
 var through, check;
 
 exports.parse = function(path, map) {
